@@ -1,0 +1,9 @@
+let form = document.getElementById("gameForm"
+
+form.addEventListener("submit, function(event) {
+     event.preventDefault() ;
+     let choice = 
+         document.getElementById("playerChoice").value;
+
+      console.log(choice);
+});
