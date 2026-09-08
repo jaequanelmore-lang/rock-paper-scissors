@@ -18,3 +18,18 @@ function getComputerChoice() {
 
     return choices[randomIndex];
 }
+
+
+funtion determineWinner(player, computer) {
+    if (player === computer) {
+            return "it's a tie!";
+        }
+if (
+     (player === "rock && computer === "scissors")  | |
+     (player === "paper && computer === "rock") | |
+     (player === "scissors && computer === "paper") | |
+) {
+     return "You win!";
+}
+ return "computer wins!";
+}
