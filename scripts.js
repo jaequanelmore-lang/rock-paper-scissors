@@ -1,15 +1,15 @@
 let result = document.getElementById("result");
 
 document.getElementById("rock").addEventListener("click", function() {
-    playGame("rock");
+    playGame("three");
 });
 
 document.getElementById("paper").addEventListener("click", function() {
-    playGame("paper");
+    playGame("midrange");
 });
 
 document.getElementById("scissors").addEventListener("click", function() {
-    playGame("scissors");
+    playGame("layup");
 });
 
 
@@ -28,7 +28,7 @@ function playGame(playerChoice) {
 
 function getComputerChoice() {
 
-    let choices = ["rock", "paper", "scissors"];
+    let choices = ["three", "midrange", "layup"];
 
     let randomIndex =
         Math.floor(Math.random() * choices.length);
@@ -44,14 +44,14 @@ function determineWinner(player, computer) {
     }
 
     if (
-        (player === "rock" && computer === "scissors") ||
-        (player === "paper" && computer === "rock") ||
-        (player === "scissors" && computer === "paper")
+        (player === "three" && computer === "layup") ||
+        (player === "layup" && computer === "three") ||
+        (player === "midrange" && computer === "three")
     ) {
-        return "You win! 🎉";
+        return "You scored! 🎉";
     }
 
-    return "Computer wins! 💻";
+    return "you got blocked! 💻";
 }
 
 
