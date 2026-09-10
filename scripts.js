@@ -51,5 +51,5 @@ function determineWinner(player, computer) {
         return "You scored! 🎉";
     }
 
-    return "You got blocked! 🖐️";
+    return "great bucket 🖐️";
 }
