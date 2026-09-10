@@ -1,26 +1,33 @@
-let form = document.getElementById("gameForm");
+let result = document.getElementById("result");
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
+document.getElementById("rock").addEventListener("click", function() {
+    playGame("rock");
+});
 
-    let playerChoice = document
-        .getElementById("playersChoice")
-        .value
-        .toLowerCase();
+document.getElementById("paper").addEventListener("click", function() {
+    playGame("paper");
+});
 
-    let computerChoice = getComputerChoice();
-
-    let result = determineWinner(
-        playerChoice,
-        computerChoice
-    );
-
-    document.getElementById("result").textContent =
-        "Computer chose " + computerChoice + ". " + result;
+document.getElementById("scissors").addEventListener("click", function() {
+    playGame("scissors");
 });
 
 
+function playGame(playerChoice) {
+
+    let computerChoice = getComputerChoice();
+
+    let winner = determineWinner(playerChoice, computerChoice);
+
+    result.textContent =
+        "You chose " + playerChoice +
+        ". Computer chose " + computerChoice +
+        ". " + winner;
+}
+
+
 function getComputerChoice() {
+
     let choices = ["rock", "paper", "scissors"];
 
     let randomIndex =
@@ -41,8 +48,10 @@ function determineWinner(player, computer) {
         (player === "paper" && computer === "rock") ||
         (player === "scissors" && computer === "paper")
     ) {
-        return "You win!";
+        return "You win! 🎉";
     }
 
-    return "Computer wins!";
+    return "Computer wins! 💻";
 }
+
+
