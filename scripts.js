@@ -40,7 +40,7 @@ function getComputerChoice() {
 function determineWinner(player, computer) {
 
     if (player === computer) {
-        return "It's a tie! 🏀";
+        return "you got blocked 🏀";
     }
 
     if (
