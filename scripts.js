@@ -40,18 +40,16 @@ function getComputerChoice() {
 function determineWinner(player, computer) {
 
     if (player === computer) {
-        return "It's a tie!";
+        return "It's a tie! 🏀";
     }
 
     if (
         (player === "three" && computer === "layup") ||
-        (player === "layup" && computer === "three") ||
+        (player === "layup" && computer === "midrange") ||
         (player === "midrange" && computer === "three")
     ) {
         return "You scored! 🎉";
     }
 
-    return "you got blocked! 💻";
+    return "You got blocked! 🖐️";
 }
-
-
